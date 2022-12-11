@@ -41,16 +41,16 @@
     // .---------------------------------------------------------------.       .-----------------------------------------------------------------.
     // |   ESC         |        |        |        |         |          |       |   HOME  |    PD    |    PU   |   END   |    DEL   |     BSPC    |
     // |---------------+--------+--------+--------+---------+----------|       |---------+----------+---------+---------+----------+-------------|
-    // |   SHFT        |        |        |    `   |    ~    |          |       |  LEFT   |    DOWN  |    UP   |  RIGHT  |    '"    |     TAB     |
+    // |   SHFT        |        |        |    `   |    ~    |          |       |  LEFT   |    DOWN  |    UP   |  RIGHT  |    INS   |     TAB     |
     // |---------------+--------+--------+--------+---------+----------|       |---------+----------+---------+---------+----------+-------------|
-    // |   CTRL        |        |        |        |         |          |       |    -    |    _     |    =    |    +    |          |     CAPS    |
+    // |   CTRL        |        |        |        |         |          |       |    -    |    _     |    =    |    +    |    '"    |     CAPS    |
     // '---------------------------------+--------+---------+----------+       |---------+----------+---------+----------------------------------'
     //                                   |  ALT   |         |   SPC    |       |   ENT   |    ADJ   |   ALT   |
     //                                   '--------+---------+----------'       '---------+----------+---------'
           bindings = <
           &none &kp ESC     &trans  &trans  &trans    &trans     &trans      &kp HOME     &kp PG_DN  &kp PG_UP  &kp END   &kp DEL  &trans    &none
-                &kp LSHIFT  &trans  &trans  &kp GRAVE &kp TILDE  &trans      &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT &kp SQT  &kp TAB
-                &kp LCTRL   &trans  &trans  &trans    &trans     &trans      &kp KP_MINUS &kp UNDER  &kp EQUAL  &kp PLUS  &trans   &kp CAPS
+                &kp LSHIFT  &trans  &trans  &kp GRAVE &kp TILDE  &trans      &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT &kp INS  &kp TAB
+                &kp LCTRL   &trans  &trans  &trans    &trans     &trans      &kp KP_MINUS &kp UNDER  &kp EQUAL  &kp PLUS  &kp SQT   &kp CAPS
                                             &trans    &none      &trans      &trans       &mo ADJ    &trans
             >;
         };
