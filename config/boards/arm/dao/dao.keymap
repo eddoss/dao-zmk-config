@@ -9,10 +9,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define QWERTY 0
-#define NAVI 1
-#define PUNCT 2
-#define ADJUST 3
+#define MY_NVG 1
+#define MY_PNT 2
+#define MY_ADJ 3
 
 
 / {
@@ -27,13 +26,13 @@
     // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
     // |   CTRL       |    Z    |    X   |   C    |    V    |    B    |       |   N   |    M    |    ,    |    .    |    /?    |   CTRL   |
     // '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
-    //                                   |  ALT   |   NAVI  |   SPC   |       |  ENT  |  PUNCT  |   ALT   |
+    //                                   |  ALT   |   MY_NVG  |   SPC   |       |  ENT  |  MY_PNT  |   ALT   |
     //                                   '--------+---------+---------'       '-------+---------+---------'
             bindings = <
           &none &kp ESC          &kp Q     &kp W   &kp E     &kp R     &kp T        &kp Y    &kp U      &kp I      &kp O     &kp P      &kp BSPC     &none
                 &kp LSHIFT       &kp A     &kp S   &kp D     &kp F     &kp G        &kp H    &kp J      &kp K      &kp L     &kp SEMI   &kp RSHIFT
                 &kp LCTRL        &kp Z     &kp X   &kp C     &kp V     &kp B        &kp N    &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RCTRL
-                                                &kp LALT  &mo NAVI  &kp SPACE       &kp RET  &mo PUNCT  &RALT
+                                                &kp LALT  &mo MY_NVG  &kp SPACE       &kp RET  &mo MY_PNT  &RALT
             >;
         };
                     
@@ -45,13 +44,13 @@
     // |---------------+--------+--------+--------+---------+----------|       |---------+----------+---------+---------+----------+-------------|
     // |   CTRL        |        |        |        |         |          |       |    -    |    _     |    =    |    +    |          |     CAPS    |
     // '---------------------------------+--------+---------+----------+       |---------+----------+---------+----------------------------------'
-    //                                   |  ALT   |         |   SPC    |       |   ENT   |  ADJUST  |   ALT   |
+    //                                   |  ALT   |         |   SPC    |       |   ENT   |  MY_ADJ  |   ALT   |
     //                                   '--------+---------+----------'       '---------+----------+---------'
             bindings = <
           &none &kp ESC          &trans   &trans   &trans    &trans     &trans      &kp PG_DN    &kp PG_UP  &kp HOME   &kp END   &kp DEL     &trans         &none
                 &kp LSHIFT       &trans   &trans   &kp GRAVE &kp TILDE  &trans      &kp DOWN     &kp UP     &kp LEFT   &kp RIGHT &kp SQT     &kp TAB
                 &kp LCTRL        &trans   &trans   &trans    &trans     &trans      &kp KP_MINUS &kp UNDER  &kp EQUAL  &kp PLUS  &trans      &kp CAPS
-                                                &trans    &none      &trans         &trans       &none      &trans
+                                                &trans    &none      &trans         &trans       &mo MY_ADJ      &trans
             >;
         };
                     
