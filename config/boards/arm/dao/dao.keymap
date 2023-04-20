@@ -39,19 +39,19 @@
                     
         lower_layer {
     // .-------------------------------------------------------------.       .----------------------------------------------------------------.
-    // |   ESC        |        |        |        |         |         |       |   HOME  |    PD   |    PU   |   END   |    DEL   |     BSPC    |
+    // |   ESC        |        |        |        |         |         |       |   HOME  |    PD   |    PU   |   END   |    DEL   |             |
     // |--------------+--------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+-------------|
-    // |   SHFT       |        |        |    `   |    ~    |    \|   |       |   LEFT  |   DOWN  |    UP   |  RIGHT  |    INS   |     TAB     |
+    // |   SHFT       |    "   |    '   |    `   |    ~    |         |       |   LEFT  |   DOWN  |    UP   |  RIGHT  |    INS   |     TAB     |
     // |--------------+--------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+-------------|
-    // |   CTRL       |        |        |        |         |         |       |    -    |    _    |    =    |    +    |    '"    |     CAPS    |
+    // |   CTRL       |        |        |        |         |         |       |         |    -    |    +    |    _    |     =    |     CAPS    |
     // '--------------------------------+--------+---------+---------+       |---------+---------+---------+----------------------------------'
-    //                                  |  ALT   |         |   SPC   |       |   ENT   |    ADJ  |   ALT   |
+    //                                  |  ALT   |         |   SPC   |       |   ENT   |   ADJ   |   ALT   |
     //                                  '--------+---------+---------'       '---------+---------+---------'
           bindings = <
-          &none &kp ESC     &trans  &trans  &trans    &trans     &kp BSLH    &kp HOME     &kp PG_DN  &kp PG_UP  &kp END   &kp DEL  &trans    &none
-                &kp LSHIFT  &trans  &trans  &kp GRAVE &kp TILDE  &trans      &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT &kp INS  &kp TAB
-                &kp LCTRL   &trans  &trans  &trans    &trans     &trans      &kp KP_MINUS &kp UNDER  &kp EQUAL  &kp PLUS  &kp SQT   &kp CAPS
-                                            &trans    &none      &trans      &trans       &mo ADJ    &trans
+          &none &kp ESC     &trans  &trans  &trans    &trans     &trans      &kp HOME  &kp PG_DN    &kp PG_UP  &kp END    &kp DEL    &trans    &none
+                &kp LSHIFT  &kp DQT &kp SQT &kp GRAVE &kp TILDE  &trans      &kp LEFT  &kp DOWN     &kp UP     &kp RIGHT  &kp INS    &kp TAB
+                &kp LCTRL   &trans  &trans  &trans    &trans     &trans      &trans    &kp KP_MINUS &kp PLUS   &kp UNDER  &kp EQUAL  &kp CAPS
+                                            &trans    &none      &trans      &trans    &mo ADJ      &trans
             >;
         };
                     
@@ -59,17 +59,17 @@
     // .-------------------------------------------------------------.       .----------------------------------------------------------------.
     // |   ESC        |    1   |    2   |    3   |    4    |    5    |       |    6    |    7    |    8    |    9    |     0    |     BSPC    |
     // |--------------+--------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+-------------|
-    // |   SHFT       |    (   |    {   |    [   |    <    |    &    |       |    @    |    !    |    #    |    ^    |     %    |     TAB     |
+    // |   SHFT       |    (   |    {   |    [   |    <    |    |    |       |         |    !    |    @    |    #    |     $    |     TAB     |
     // |--------------+--------+--------+--------+---------+---------|       |---------+---------+---------+---------+----------+-------------|
-    // |   CTRL       |    )   |    }   |    ]   |    >    |    *    |       |         |         |         |         |          |     GUI     |
+    // |   CTRL       |    )   |    }   |    ]   |    >    |    \    |       |         |    %    |    ^    |    &    |     *    |     GUI     |
     // '--------------------------------+--------+---------+---------+       |---------+---------+---------+----------------------------------'
     //                                  |  ALT   |         |   SPC   |       |         |         |         |
     //                                  '--------+---------+---------'       '---------+---------+---------'
         bindings = <
-        &none   &kp ESC    &kp N1   &kp N2     &kp N3    &kp N4   &kp N5        &kp N6  &kp N7    &kp N8    &kp N9     &kp N0     &trans   &none
-                &kp LSHIFT &kp LPAR &kp LBRC   &kp LBKT  &kp LT   &kp AMPS      &kp AT_SIGN  &kp EXCL  &kp HASH  &kp CARET  &kp PRCNT  &kp TAB
-                &kp LCTRL  &kp RPAR &kp RBRC   &kp RBKT  &kp GT   &kp STAR      &trans  &trans    &trans    &trans     &trans     &kp LGUI
-                                               &trans    &none    &trans        &trans  &none     &trans
+        &none   &kp ESC    &kp N1   &kp N2     &kp N3    &kp N4   &kp N5        &kp N6   &kp N7    &kp N8      &kp N9    &kp N0   &trans   &none
+                &kp LSHIFT &kp LPAR &kp LBRC   &kp LBKT  &kp LT   &kp PIPE      &trans   &kp EXCL  &kp AT_SIGN &kp HASH  &kp DLLR &kp TAB
+                &kp LCTRL  &kp RPAR &kp RBRC   &kp RBKT  &kp GT   &kp BSLH      &trans   &kp PRCNT &kp CARET   &kp AMPS  &kp STAR &kp LGUI
+                                               &trans    &none    &trans        &trans   &none     &trans
             >;
         };
 
@@ -84,9 +84,9 @@
     //                                  |  BTCLR |         |         |       |         |         |         |
     //                                  '--------+---------+---------'       '---------+---------+---------'
           bindings = <
-          &none &kp F1         &kp F2       &kp F3          &kp F4        &kp F5        &kp F6                    &kp F7  &kp F8         &kp F9   &kp F10    &kp F11      &kp F12         &none
-                &kp LSHIFT     &trans       &trans          &trans        &trans        &trans                    &trans  &kp K_VOL_DN   &kp K_VOL_UP   &trans     &trans       &kp RSHIFT
-                &kp LCTRL      &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5              &trans  &trans         &trans   &trans     &trans       &kp RCTRL
+          &none &kp F1         &kp F2       &kp F3          &kp F4        &kp F5        &kp F6                    &kp F7  &kp F8         &kp F9       &kp F10    &kp F11      &kp F12         &none
+                &kp LSHIFT     &trans       &trans          &trans        &trans        &trans                    &trans  &kp K_VOL_DN   &kp K_VOL_UP &trans     &trans       &kp RSHIFT
+                &kp LCTRL      &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5              &trans  &trans         &trans       &trans     &trans       &kp RCTRL
                                                             &bt BT_CLR    &none         &trans                    &trans  &none          &trans
             >;
         };
